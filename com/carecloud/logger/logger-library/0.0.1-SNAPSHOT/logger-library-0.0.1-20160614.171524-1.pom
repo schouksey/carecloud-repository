@@ -41,9 +41,13 @@
 <!--  First deploy in local repository -->
 <distributionManagement>	
   	<repository>
-  		<id>logger-library</id>
+  		<id>logger-library-release</id>
   		<url>file://${project.build.directory}/logger-library/</url>
   	</repository>
+  	<snapshotRepository>
+  		<id>logger-library</id>
+  		<url>file://${project.build.directory}/logger-library/</url>
+  	</snapshotRepository>
 </distributionManagement>
 
 <!--  Add Github Server Configuration -->
