@@ -39,11 +39,13 @@
 <!--  Deploying Maven Repository to Github -->
 
 <!--  First deploy in local repository -->
-<distributionManagement>	
+<distributionManagement>
+ 	
   	<repository>
   		<id>logger-library-release</id>
   		<url>file://${project.build.directory}/logger-library/</url>
-  	</repository>
+  	</repository>  	
+  	
   	<snapshotRepository>
   		<id>logger-library</id>
   		<url>file://${project.build.directory}/logger-library/</url>
@@ -57,7 +59,7 @@
 
 <!--  SCM Configuration -->
 <scm>
- 	<connection>scm:git:git@github.com/schouksey/carecloud-repository.git</connection>  	
+ 	<connection>scm:git:git@github.com/schouksey/test-repo.git</connection>  	
 </scm>
 
 <!-- MAVEN Build Libraries -->
@@ -81,7 +83,7 @@
   			<includes><include>**/*</include></includes>
   			<repositoryName>carecloud-repository</repositoryName>
   			<repositoryOwner>schouksey</repositoryOwner>
-  			<branch>refs/tags/${project.version}</branch>
+  			<branch>refs/heads/master</branch>
   			<message> Deploy logger-library for ${project.version}</message>  			
   		</configuration>
   		<executions>
@@ -93,7 +95,7 @@
 	  		</execution>	  			
   		</executions>
   	</plugin>
-  	<!-- To generate java docs -->
+  	<!-- To generate java docs 
   	<plugin>
 		  <groupId>org.apache.maven.plugins</groupId>
 		  <artifactId>maven-javadoc-plugin</artifactId>
@@ -106,6 +108,7 @@
 		  </execution>
 		  </executions>
 	</plugin>
+	-->
   </plugins>      
 </build>  
 </project>
