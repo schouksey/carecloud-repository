@@ -39,13 +39,11 @@
 <!--  Deploying Maven Repository to Github -->
 
 <!--  First deploy in local repository -->
-<distributionManagement>
- 	
+<distributionManagement> 	
   	<repository>
   		<id>logger-library-release</id>
   		<url>file://${project.build.directory}/logger-library/</url>
-  	</repository>  	
-  	
+  	</repository>  	  	
   	<snapshotRepository>
   		<id>logger-library</id>
   		<url>file://${project.build.directory}/logger-library/</url>
